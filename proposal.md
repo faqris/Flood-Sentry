@@ -1,5 +1,8 @@
-# -
-#### Software Engineering (SEEL4213)
+# Flood Sentry
+### Software Engineering (SEEL4213)
+#### Group: Rampaging Rhinos
+
+<br> 
 
 #### Table of contents
 
