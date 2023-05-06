@@ -28,8 +28,11 @@
 
 ## 2.0 System Architecture
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](./img/system_arch.png)
 
-## 3.0 Sensor
+The system architecture consists of a ultrasonic HC-SR04 sensor sends data to a microcontroller, which is NodeMCU ESP32. It connects to a Mosquitto MQTT broker and send the data via wifi. A Python Flask application run on a server hosted on PythonAnywhere subscribes to the MQTT broker, receives the data and stores it to an InfluxDB database. Grafana reads the data from InfluxDB database and visualize it in real-time dashboards. The dashboard is accessible to user via a public URL that is hosted on the PythonAnywhere cloud platform.
+
+## 3.0 Sensor 
 
 
 ## 4.0 Cloud Platform
