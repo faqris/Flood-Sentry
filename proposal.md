@@ -13,6 +13,11 @@
 [2.0 System Architecture](#20-system-architecture)
 
 [3.0 Sensor](#30-sensor)
+> [3.1 Nodemcu ESP32](#31-nodemcu-esp32)
+>
+> [3.2 Ultrasonic HC-SR04](#32-ultrasonic-hc-sr04)
+> 
+> [3.3 MQTT](#33-mqtt)
 
 [4.0 Cloud Platform](#40-cloud-platform)
 > [4.1 PythonAnywhere](#41-pythonanywhere)
@@ -20,6 +25,9 @@
 > [4.2 Demo Video](#42-demo-video)
 
 [5.0 Dashboard](#50-dashboard)
+> [5.1 Grafana](#51-grafana)
+>
+> [5.2 User Interface](#52-user-interface)
 
 <br>
 
@@ -34,6 +42,14 @@ The system architecture consists of a ultrasonic HC-SR04 sensor that sends data 
 
 ## 3.0 Sensor 
 
+#### 3.1 Nodemcu ESP32
+
+
+#### 3.2 Ultrasonic HC-SR04
+
+
+#### 3.3 MQTT
+
 
 ## 4.0 Cloud Platform
 
@@ -46,3 +62,10 @@ PythonAnywhere allows users to write and run Python code in the cloud, which is 
 Porting flask app from stage 1 to PythonAnywhere 
 
 ## 5.0 Dashboard
+
+#### 5.1 Grafana
+
+
+#### 5.2 User Interface
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](./img/dashboard.png)
