@@ -30,7 +30,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](./img/system_arch.png)
 
-The system architecture consists of a ultrasonic HC-SR04 sensor sends data to a microcontroller, which is NodeMCU ESP32. It connects to a Mosquitto MQTT broker and send the data via wifi. A Python Flask application run on a server hosted on PythonAnywhere subscribes to the MQTT broker, receives the data and stores it to an InfluxDB database. Grafana reads the data from InfluxDB database and visualize it in real-time dashboards. The dashboard is accessible to user via a public URL that is hosted on the PythonAnywhere cloud platform.
+The system architecture consists of a ultrasonic HC-SR04 sensor that sends data to a microcontroller, which is NodeMCU ESP32. It connects to a Mosquitto MQTT broker and send the data via wifi. A Python Flask application run on a server hosted on PythonAnywhere subscribes to the MQTT broker, receives the data and stores it to an InfluxDB database. Grafana reads the data from InfluxDB database and visualize it in real-time dashboards. The dashboard is accessible to user via a public URL that is hosted on the PythonAnywhere cloud platform.
 
 ## 3.0 Sensor 
 
@@ -42,5 +42,7 @@ PythonAnywhere allows users to write and run Python code in the cloud, which is 
 
 #### 4.2 Demo Video
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://i.ytimg.com/vi/kyg1rLgmdiE/maxresdefault.jpg" width="50%">](https://youtu.be/kyg1rLgmdiE "Click this to open video")
+
+Porting flask app from stage 1 to PythonAnywhere 
 
 ## 5.0 Dashboard
