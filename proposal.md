@@ -10,6 +10,7 @@
 
 [1.0 Problem Statement](#10-problem-statement)
 
+
 [2.0 System Architecture](#20-system-architecture)
 
 [3.0 Sensor](#30-sensor)
@@ -32,6 +33,8 @@
 <br>
 
 ## 1.0 Problem Statement
+
+The frequent occurrence of floods in low-lying areas poses a significant threat to life and property. Traditional flood detection methods are often limited in scope, accuracy, and timeliness. There is a need for a reliable and efficient flood detection system that can alert people in advance of an impending flood and help them take appropriate measures to minimize the damage. The goal of this project is to develop a flood detection system that uses sensors, a cloud platform, and a dashboard to detect floods in real-time, generate alerts, and provide users with critical information to mitigate the impact of floods.
 
 
 ## 2.0 System Architecture
