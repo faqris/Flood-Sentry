@@ -44,18 +44,18 @@ The system architecture consists of a ultrasonic HC-SR04 sensor that sends data 
 
 #### 3.1 Nodemcu ESP32
 
-![Uploading image.png…]()
-
 The NodeMCU ESP32 is a powerful microcontroller that is ideal for your flood detection system. It features built-in WiFi and Bluetooth capabilities, making it easy to connect to the cloud platform and communicate with other devices. With its low power consumption and small form factor, the NodeMCU ESP32 is perfect for use in remote areas where power may be limited.
 To detect floods, you can use various sensors such as water level sensors, pressure sensors, or flow sensors. These sensors can be connected to the NodeMCU ESP32, which will collect the sensor data and send it to the cloud platform for further processing and analysis. The NodeMCU ESP32 can also be programmed to perform real-time analysis on the data collected by the sensors, allowing for immediate detection and alert generation.
 In addition to flood detection, the NodeMCU ESP32 can be used for other applications, such as monitoring weather conditions and tracking environmental changes. Its versatility and ease of use make it an excellent choice for any project that requires reliable and efficient data collection and analysis.
 
-
 #### 3.2 Ultrasonic HC-SR04
 
+In your flood detection system, the HC-SR04 sensor can be used as a water level sensor to measure the distance between the sensor and the water surface. By measuring the distance, you can determine the water level in real-time.
+To use the HC-SR04 sensor for water level detection, you will need to connect it to your NodeMCU ESP32 microcontroller. You can do this by connecting the VCC and GND pins of the sensor to the corresponding pins on the NodeMCU ESP32. You will also need to connect the Echo and Trig pins of the sensor to two available GPIO pins on the NodeMCU ESP32.
+Once the sensor is connected, you can write code to collect data from the sensor and send it to the cloud platform for analysis. The NodeMCU ESP32 can be programmed to perform real-time analysis on the data collected by the sensor, allowing for immediate detection and alert generation.
 
 #### 3.3 MQTT
-
+MQTT (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol that is ideal for use in IoT (Internet of Things) applications. In your flood detection system, MQTT can be used to establish a connection between your NodeMCU ESP32 microcontroller and the cloud platform.
 
 ## 4.0 Cloud Platform
 
