@@ -33,6 +33,7 @@
 
 ## 1.0 Problem Statement
 
+The frequent occurrence of floods in low-lying areas poses a significant threat to life and property. Traditional flood detection methods are often limited in scope, accuracy, and timeliness. There is a need for a reliable and efficient flood detection system that can alert people in advance of an impending flood and help them take appropriate measures to minimize the damage. The goal of this project is to develop a flood detection system that uses sensors, a cloud platform, and a dashboard to detect floods in real-time, generate alerts, and provide users with critical information to mitigate the impact of floods.
 
 ## 2.0 System Architecture
 
@@ -44,18 +45,14 @@ The system architecture consists of a ultrasonic HC-SR04 sensor that sends data 
 
 #### 3.1 Nodemcu ESP32
 
-The NodeMCU ESP32 is a powerful microcontroller that is ideal for your flood detection system. It features built-in WiFi and Bluetooth capabilities, making it easy to connect to the cloud platform and communicate with other devices. With its low power consumption and small form factor, the NodeMCU ESP32 is perfect for use in remote areas where power may be limited.
-To detect floods, you can use various sensors such as water level sensors, pressure sensors, or flow sensors. These sensors can be connected to the NodeMCU ESP32, which will collect the sensor data and send it to the cloud platform for further processing and analysis. The NodeMCU ESP32 can also be programmed to perform real-time analysis on the data collected by the sensors, allowing for immediate detection and alert generation.
-In addition to flood detection, the NodeMCU ESP32 can be used for other applications, such as monitoring weather conditions and tracking environmental changes. Its versatility and ease of use make it an excellent choice for any project that requires reliable and efficient data collection and analysis.
+The NodeMCU ESP32 is a microcontroller that is ideal for the flood detection system. It features built-in WiFi and Bluetooth capabilities, making it easy to connect to the cloud platform and communicate with other devices. With its low power consumption and small form factor, the NodeMCU ESP32 is perfect for use in remote areas where power may be limited. To measure water level, sensors can be connected to the microcontroller for data collection to perform real-time analysis. This allowed for immediate detection and alert notifications.
 
 #### 3.2 Ultrasonic HC-SR04
 
-In your flood detection system, the HC-SR04 sensor can be used as a water level sensor to measure the distance between the sensor and the water surface. By measuring the distance, you can determine the water level in real-time.
-To use the HC-SR04 sensor for water level detection, you will need to connect it to your NodeMCU ESP32 microcontroller. You can do this by connecting the VCC and GND pins of the sensor to the corresponding pins on the NodeMCU ESP32. You will also need to connect the Echo and Trig pins of the sensor to two available GPIO pins on the NodeMCU ESP32.
-Once the sensor is connected, you can write code to collect data from the sensor and send it to the cloud platform for analysis. The NodeMCU ESP32 can be programmed to perform real-time analysis on the data collected by the sensor, allowing for immediate detection and alert generation.
+The HC-SR04 is an ultrasonic sensor that can be used as a water level sensor to measure the distance between the sensor and the water surface. It can determine the water level in real-time by emitting high-frequency sound waves and measuring the time taken for the echo to bounce back. It consists of a transmitter and a receiver module, which can detect objects within a range of 2cm to 400cm with an accuracy of up to 3mm. 
 
 #### 3.3 MQTT
-MQTT (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol that is ideal for use in IoT (Internet of Things) applications. In your flood detection system, MQTT can be used to establish a connection between your NodeMCU ESP32 microcontroller and the cloud platform.
+MQTT (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol that is ideal for use in IoT (Internet of Things) applications. It can be used to establish a connection between the NodeMCU ESP32 microcontroller and PythonAnywhere cloud platform.
 
 ## 4.0 Cloud Platform
 
@@ -70,7 +67,7 @@ Porting flask app from stage 1 to PythonAnywhere
 ## 5.0 Dashboard
 
 #### 5.1 Grafana
-
+Grafana is an open-source platform that allows users to visualize and analyze data from multiple sources through interactive and customizable dashboards. A Grafana dashboard is a collection of panels that display metrics and data in a visual format such as graphs, tables, and gauges. The dashboard can be customized according to the user's needs. Grafana also supports a wide range of data sources, databases, cloud services, and APIs. Thus, making it a versatile tool for monitoring and analyzing systems and applications.
 
 #### 5.2 User Interface
 
