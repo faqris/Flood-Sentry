@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* CSS styles for the table */
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40%;
+        float: left;
+        border-spacing: 10px;
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    .second-table {
+        margin-left: 10px;
+        margin-right: 65px;
+    }
+
+    caption {
+        font-weight: bold;
+    }
+    /* CSS styles for the button */
+    .button-container {
+        margin-top: 40px;
+    }
+    
+    .toggle-button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    
+    .toggle-button:hover {
+        background-color: #45a049;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#changeButton').click(function() {
+            $.ajax({
+                type: 'POST',
+                url: '/change_data_collection',
+                success: function(response) {
+                    console.log('Data collection changed.');
+                }
+            });
+        });
+
+        // $('#deleteButton').click(function() {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/delete_measurement',
+        //         success: function(response) {
+        //             console.log('Measurement deleted.');
+        //         }
+        //     });
+        // });
+    });
+</script>
+</head>
+<body>
+    <h1>Flood Sentry</h1>
+    <div>
+        <table>
+            <caption>Ultrasonic Sensor Data</caption>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Timestamp</th>
+                    <th>Topic</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in ultrasonic_rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1][:19] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table class="second-table">
+            <caption>Water Level Data</caption>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Timestamp</th>
+                    <th>Topic</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in waterlevel_rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1][:19] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="button-container">
+        <button id="changeButton" class="toggle-button">Toggle Data Collection</button>
+        <!-- <button id="deleteButton" class="toggle-button">Clear Data</button> -->
+    </div>
+</body>
+</html>
